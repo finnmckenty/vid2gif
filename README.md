@@ -10,9 +10,11 @@ npm run build    # static site in dist/
 ```
 
 `launch.sh` starts the dev server if it is not already running and opens the
-browser; `~/Desktop/vid2gif.app` is a double-clickable wrapper around it
-(rebuild it with `osacompile -o ~/Desktop/vid2gif.app -e 'do shell script
-"/Users/finn/Documents/claude/vid2gif/launch.sh >/dev/null 2>&1 &"'`).
+browser. On macOS you can wrap it in a double-clickable app on your Desktop:
+
+```bash
+osacompile -o ~/Desktop/vid2gif.app -e "do shell script \"$(pwd)/launch.sh >/dev/null 2>&1 &\""
+```
 
 ## How it works
 
