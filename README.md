@@ -16,6 +16,13 @@ browser. On macOS you can wrap it in a double-clickable app on your Desktop:
 osacompile -o ~/Desktop/vid2gif.app -e "do shell script \"$(pwd)/launch.sh >/dev/null 2>&1 &\""
 ```
 
+## Deploy
+
+The repo includes a `render.yaml` blueprint for a Render static site (build
+with `npm ci && npm run build`, publish `dist/`). In Render, choose
+**New → Blueprint**, point it at this repo, and accept the defaults. Any other
+static host works the same way.
+
 ## How it works
 
 1. **Load a video** – drag and drop or choose a file. Anything the browser can
